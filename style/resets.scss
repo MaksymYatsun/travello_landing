@@ -1,0 +1,16 @@
+@mixin link-reset {
+  text-decoration: unset;
+  color: unset;
+}
+
+@mixin btn-reset {
+  background-color: unset;
+  border: unset;
+  text-decoration: unset;
+  color: unset;
+}
+
+@mixin list-reset {
+  text-decoration: unset;
+  color: unset;
+}
