@@ -1,7 +1,10 @@
 @use './normalize.scss';
 
-@import '../node_modules/swiper/swiper-bundle.css';
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;500;600;700&display=swap');
+
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
 @import './global.scss';
 @import './resets.scss';
 @import './variables.scss';
@@ -137,59 +140,10 @@ body {
   }
 }
 
-// .header {
-//   position: absolute;
-//   left:0;
-//   right:0;
-//   top: 3.625rem;
-//   z-index: 10;
-
-//   &__container {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-
-//     @include container;
-//   }
-
-//   &__list {
-//     display: none;
-//     flex-direction: column;
-//     position: absolute;
-//   }
-
-//   &__item {
-//     color: #FFFFFF;
-//   }
-
-//   &__item:not(:last-child) {
-//     margin-right: 1.5rem;
-//   }
-
-//   &__link {
-
-//     @include link-reset;
-//     cursor: pointer;
-//     transition: all 0.3s ease-in;
-//   }
-
-//   &__link:hover {
-//     color: $primary-col;
-//     transition: all 0.3s ease-in;
-//   }
-
-//   &__close {
-//     display: none;
-//   }
-
-//   &__open {
-    
-//   }
-// }
-
 .hero {
   background-image: url('../assets/0_1 1.jpg');
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   min-height: 100vh;
 
@@ -205,6 +159,10 @@ body {
 
     @include md {
       font-size: 5.625rem;
+    }
+
+    .title-exp, .title-dre, .title-tra {
+      display: block;
     }
   }
 
@@ -460,12 +418,7 @@ body {
     &__btn {
       @include btn-reset;
 
-      border-radius: $rad-50;
-      padding: 0.5rem 1rem;
-      background-color: $primary-col;
-      color: #FFFFFF;
-      font-weight: 500;
-      font-size: 0.875rem;
+      @include btn;
     }
   }
 
@@ -511,13 +464,9 @@ body {
   &__btn {
     @include btn-reset;
 
+    @include btn;
+
     align-self: center;
-    border-radius: $rad-50;
-    padding: 0.5rem 1rem;
-    background-color: $primary-col;
-    color: #FFFFFF;
-    font-weight: 500;
-    font-size: 0.875rem;
   }
 }
 
@@ -810,13 +759,10 @@ body {
   &__btn {
     @include btn-reset;
 
+    @include btn;
+
     align-self: center;
-    border-radius: $rad-50;
     padding: 1rem 5.125rem;
-    background-color: $primary-col;
-    color: #FFFFFF;
-    font-weight: 500;
-    font-size: 0.875rem;
   }
 }
 
@@ -906,11 +852,9 @@ body {
   &__btn {
     @include btn-reset;
 
-    border-radius: $rad-50;
-    padding: 1rem 5.125rem;
-    background-color: $primary-col;
-    color: #FFFFFF;
-    font-weight: 500;
-    font-size: 0.875rem;
+    @include btn;
+
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
   }
 }

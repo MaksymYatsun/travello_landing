@@ -11,3 +11,22 @@
     padding-right: 40px;
   }
 }
+
+@mixin btn {
+  border-radius: $rad-50;
+  padding: 0.5rem 1rem;
+  background-color: $primary-col;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  &:hover {
+    color: $primary-col;
+    background-color: transparent;
+    border-color: $primary-col;
+    transition: all 0.3s ease-in-out;
+  }
+}
